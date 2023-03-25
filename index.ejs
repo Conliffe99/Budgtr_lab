@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All the Budget</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
+    <style>
+    </style>
+</head>
+<body>
+    <h1>Budgtr All</h1>
+    <div class = "container">
+        <% let total = 0; %>
+            }
+        <table>
+            <% for(let i = 0; i < budgets.length; i++) {%>
+            <tr>
+                <td>
+                    <%= budgets [i].date %>
+                </td>
+                <td>
+                   <a href="/budgets/<%= i %>"></a><%= budgets [i].name %>
+                </td>
+                <td>
+                    <%= budgets [i].from %>
+                </td>
+                <td>
+                    Total:<%= budgets [i].amount %>
+                </td>
+            </tr>
+            <% } %>
+            <tr>
+                Total:
+            </tr>
+        </table>
+    
+        <button onclick="window.location.href='http://localhost:4000/budgets';">Back</button>
+
+    </div>
+    
+</body>
+</html>
